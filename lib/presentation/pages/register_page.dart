@@ -1,11 +1,10 @@
 import 'package:chat_app/core/constants/constants.dart';
-import 'package:chat_app/core/routers/router_names.dart';
 import 'package:chat_app/presentation/widgets/custom_elevated_button.dart';
 import 'package:chat_app/presentation/widgets/custom_text_filed.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 64),
                 Text(
-                  'LOGIN',
+                  'REGISTER',
                   style: AppTextStyle.openSans32Bold.copyWith(
                     color: AppColors.kSecondaryColor,
                   ),
@@ -45,14 +44,14 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 10),
                 CustomTextField(hint: 'Password'),
                 const SizedBox(height: 32),
-                CustomElevatedButton(title: 'LOGIN'),
+                CustomElevatedButton(title: 'REGISTER'),
                 const SizedBox(height: 16),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, RouterNames.register);
+                    Navigator.pop(context);
                   },
                   child: Text(
-                    'don\'t have account?  register now',
+                    'I have account?  Login now',
                     style: AppTextStyle.openSans20Bold.copyWith(
                       color: AppColors.kSecondaryColor,
                     ),

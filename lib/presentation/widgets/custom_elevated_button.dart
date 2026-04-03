@@ -2,7 +2,8 @@ import 'package:chat_app/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key});
+  final String title;
+  const CustomElevatedButton({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomElevatedButton extends StatelessWidget {
         ),
       ),
       child: Text(
-        'LOGIN',
+        title,
         style: AppTextStyle.openSans22Bold.copyWith(
           color: AppColors.kPrimaryColor,
         ),
