@@ -2,12 +2,15 @@ import 'package:chat_app/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
+  final Function(String)? onChanged;
   final String hint;
-  const CustomTextField({super.key, required this.hint});
+
+  const CustomTextField({super.key, required this.hint, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: onChanged,
       style: AppTextStyle.openSans20Bold.copyWith(
         color: AppColors.kSecondaryColor,
       ),
