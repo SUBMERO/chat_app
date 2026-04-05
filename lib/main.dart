@@ -31,7 +31,8 @@ class ChatApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Chat App',
       onGenerateRoute: RouterHandler.generateRoute,
-      initialRoute: RouterNames.login,
+      // منساش ارجهعا login
+      initialRoute: RouterNames.home,
       home: const LoginPage(),
     );
   }
