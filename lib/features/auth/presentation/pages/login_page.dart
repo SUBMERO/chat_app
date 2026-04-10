@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthSuccessState) {
-          Navigator.pushNamed(context, RouterNames.home);
+          Navigator.pushReplacementNamed(context, RouterNames.home);
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Login Success'),
@@ -72,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 16),
                     CustomTextField(
                       hint: 'Email',
+                      isPassword: false,
                       onChanged: (data) {
                         email = data;
                       },
@@ -79,6 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 10),
                     CustomTextField(
                       hint: 'Password',
+                      isPassword: true,
                       onChanged: (data) {
                         password = data;
                       },

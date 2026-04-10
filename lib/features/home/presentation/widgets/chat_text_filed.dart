@@ -5,11 +5,20 @@ import 'package:chat_app/core/constants/constants.dart';
 
 class ChatTextFiled extends StatelessWidget {
   final VoidCallback? onTap;
-  const ChatTextFiled({super.key, this.onTap});
+  final Function(String)? onSubmitted;
+  final TextEditingController? controller;
+  const ChatTextFiled({
+    super.key,
+    this.onTap,
+    this.onSubmitted,
+    this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: onSubmitted,
+      controller: controller,
       maxLines: 5,
       minLines: 1,
       keyboardType: TextInputType.multiline,

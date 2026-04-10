@@ -14,7 +14,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthLoadingState());
     try {
       await authRepository.signUp(email, password);
-      emit(AuthSuccessState());
+      emit(AuthSuccessState(email: email));
     } catch (e) {
       emit(AuthErrorState(errorMessage: e.toString()));
     }
@@ -27,7 +27,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthLoadingState());
     try {
       await authRepository.signIn(email, password);
-      emit(AuthSuccessState());
+      emit(AuthSuccessState(email: email));
     } catch (e) {
       emit(AuthErrorState(errorMessage: e.toString()));
     }

@@ -4,7 +4,6 @@ import 'package:chat_app/features/auth/data/datasources/auth_remote_data_source.
 import 'package:chat_app/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:chat_app/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:chat_app/firebase_options.dart';
-import 'package:chat_app/features/auth/presentation/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,8 +31,7 @@ class ChatApp extends StatelessWidget {
       title: 'Chat App',
       onGenerateRoute: RouterHandler.generateRoute,
       // منساش ارجهعا login
-      initialRoute: RouterNames.home,
-      home: const LoginPage(),
+      initialRoute: RouterNames.login,
     );
   }
 }

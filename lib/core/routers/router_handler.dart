@@ -13,7 +13,7 @@ class RouterHandler {
       case RouterNames.register:
         return MaterialPageRoute(builder: (context) => const RegisterPage());
       case RouterNames.home:
-        return MaterialPageRoute(builder: (context) => const HomePage());
+        return MaterialPageRoute(builder: (context) => HomePage());
 
       default:
         return MaterialPageRoute(

@@ -71,6 +71,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 16),
                     CustomTextField(
+                      isPassword: false,
                       hint: 'Email',
                       onChanged: (data) {
                         email = data;
@@ -78,6 +79,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
+                      isPassword: true,
                       hint: 'Password',
                       onChanged: (data) {
                         password = data;
