@@ -28,7 +28,7 @@ A real-time messaging application built with **Flutter** and powered by **Fireba
 
 | Authentication | Chat Interface |
 | :---: | :---: |
-| ![Login Screen]!(image.png) |
+| ![Login](image-1.png) |
 
 ---
 
